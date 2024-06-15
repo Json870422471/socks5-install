@@ -44,3 +44,20 @@ socks5 启动 / 停止 / 重启 / 查看状态
 socks5 更新 / 查看信息
 
 `socks5 {update|info}`
+
+
+
+service ss5 start  #启动命令
+service ss5 restart #重启命令
+6.修改端口（可选，默认端口为1080）
+vi /etc/sysconfig/ss5
+#添加这个 后重启
+S5_OPTS=" -u root -b 0.0.0.0:8899"
+
+（2）设置账号和密码 或者增加
+vim /etc/opt/ss5/ss5.passwd
+#添加用户名和密码
+admin   passwd
+
+
+
